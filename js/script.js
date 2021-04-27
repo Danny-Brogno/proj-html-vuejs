@@ -12,9 +12,36 @@ function numberGenerator(min, max) {
 function vueInit() {
 
   new Vue({
+
     el: "#vueDanny",
+
     data: {
-      "logoImg": "img/other-img/classic_shop_logo2x.png"
+      "logoImg": "img/other-img/classic_shop_logo2x.png",
+
+      navbar: [
+
+        {
+          "name":"Home",
+          "chevron": true
+        },
+        {
+          "name":"Shop",
+          "chevron": true
+        },
+        {
+          "name":"Products",
+          "chevron": true
+        },
+        {
+          "name":"Categories",
+          "chevron": true
+        },
+        {
+          "name":"News",
+          "chevron": false
+        }
+
+      ]
     }, // END OF DATA
 
     methods: {

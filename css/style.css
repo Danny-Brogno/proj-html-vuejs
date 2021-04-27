@@ -3,6 +3,8 @@
 :root {
   --roman-red: #CD0000;
   --scottish-blue: #0065bd;
+  --eleganBlue: #427ed1;
+  --lighter-blue: #4c8be0;
   --darker-yellow: #ffaf00;
   --coral-red: #FF7F50;
   --emerald-green: #00C957;
@@ -145,17 +147,53 @@ nav div:last-of-type ul {
   justify-content: space-between;
 }
 
-nav div:last-of-type > ul > li > a {
+/* HERE I CREATE A TRANSPARENT BORDER */
+nav div:last-of-type > ul > li {
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-color: transparent;
+}
 
+/* ON HOVER THE TRANSPARENT TOP TAKES THIS COLOUR */
+nav div:last-of-type > ul > li:hover {
+  color: var(--eleganBlue);
+  border-color: var(--eleganBlue);
+}
+
+/* THIS BRINGS UP THE BORDER */
+nav div:last-of-type > ul > li > a {
+  line-height: 118px;
 }
 
 nav div:last-of-type li .fa-chevron-down {
   margin-left: 10px;
 }
 
+/* THIS IS JUST THE FORST LI THAT REMAINS BLUE ALL THE TIME */
 nav div:last-of-type > ul > li:first-of-type {
   height: 100%;
   border-top-width: 3px;
   border-top-style: solid;
-  border-color: #427ed1;
+  border-color: var(--eleganBlue);
+  color: var(--eleganBlue);
+}
+
+/* THIS IS THE "SHOP NOW "BUTTON" */
+nav div:last-of-type li:nth-child(6) a {
+  padding: 20px 60px;
+  background-color: var(--scottish-blue);
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+}
+
+/* SHOP NOW "BUTTON" and Search have NO border top */
+nav div:last-of-type ul li:last-of-type:hover,
+nav div:last-of-type li:nth-child(6):hover {
+  border-color: transparent;
+}
+
+/* OH HOVER THE "BUTTON" change color on hover*/
+nav div:last-of-type li:nth-child(6) a:hover {
+  background-color: var(--lighter-blue);
 }

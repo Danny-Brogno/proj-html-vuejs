@@ -88,56 +88,12 @@
           <div>
             <ul>
 
-              <li>
+              <li v-for="elem in navbar">
                 <a href="#">
                   <span>
-                    Home
+                    {{ elem.name }}
                   </span>
-                  <i class="fas fa-chevron-down"></i>
-                </a>
-              </li>
-
-              <li>
-                <a href="#">
-                  <span>
-                    Shop
-                  </span>
-                  <i class="fas fa-chevron-down"></i>
-                </a>
-              </li>
-
-              <li>
-                <a href="#">
-                  <span>
-                    Products
-                  </span>
-                  <i class="fas fa-chevron-down"></i>
-                </a>
-              </li>
-
-              <li>
-                <a href="#">
-                  <span>
-                    Categories
-                  </span>
-                  <i class="fas fa-chevron-down"></i>
-                </a>
-              </li>
-
-              <li>
-                <a href="#">
-                  <span>
-                    News
-                  </span>
-                </a>
-              </li>
-
-              <li>
-                <a href="#">
-                  <span>
-                    Elements
-                  </span>
-                  <i class="fas fa-chevron-down"></i>
+                  <i v-if="elem.chevron == true" class="fas fa-chevron-down"></i>
                 </a>
               </li>
 
@@ -162,11 +118,13 @@
 
         </nav> <!-- END OF LOWER SECTION OF HEADER -->
 
-
       </header> <!-- END OF HEADER -->
 
-
     </section><!-- END OF DANNY VUE -->
+
+    <section class="jumbotron">
+
+    </section>
 
   </body>
 </html>
