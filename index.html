@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- FAVICON -->
   <link rel="icon" sizes="16x16" href="img/favicon.png">
+  <!-- ROBOTO GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100&display=swap" rel="stylesheet">
   <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
   <!-- J QUERY -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- VUE -->
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <!-- AXIOS -->
-  <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
   <!-- MY JS -->
   <script src="js/script.js"></script>
-  <title>Boolflix</title>
+  <title>My project</title>
 
   <body>
 
@@ -25,132 +25,146 @@
 
       <header>
 
-        <nav>
+        <div> <!-- START OF UPPER SECTION OF HEADER -->
 
-          <!-- TOP LEFT LOGO IMG -->
-          <div>
-            <img :src="boolflixHeader">
+          <div class="upperHeaderLeft"> <!-- SOCIAL LOGOS (LEFT) -->
+
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+              <i class="fab fa-youtube"></i>
+            </a>
+
           </div>
 
-          <!-- TOP RIGHT INPUT AND BUTTON -->
-          <div>
-            <input type="text" placeholder="Search Films/Series" v-model="movieListInput" @keyup.enter="apiFunction">
-            <button type="button" name="button" @click="apiFunction">GO!</button>
+          <div class="upperHeaderRight"><!-- LOGIN DETAILS (RIGHT) -->
+
             <div>
-              <i class="fas fa-square"></i>
-              <p>Movies</p>
-              <i class="fas fa-square"></i>
-              <p>Series</p>
+              <a href="#">
+                <h1>Shopping cart</h1>
+              </a>
             </div>
+
+            <div>
+              <a href="#">
+                <h1>My account</h1>
+                &#160;
+                <i class="fas fa-chevron-down"></i>
+              </a>
+            </div>
+
+            <div>
+              <a href="#">
+                <i class="fas fa-shopping-cart"></i>
+                &#160;
+                <h3>Cart</h3>
+                &#160;
+                <i class="fas fa-chevron-down"></i>
+              </a>
+            </div>
+
           </div>
 
-        </nav>
+        </div> <!-- END OF UPPER SECTION OF HEADER -->
 
-      </header>
+        <hr>
 
-      <main>
+        <nav> <!-- START OF LOWER SECTION OF HEADER -->
 
-        <!-- MIDDLE SECTION WITH TWO DISAPPEARING IMAGES -->
-        <div v-if="showImage" id="disappearingPic">
-          <img :src="greyBackground">
-          <img :src="boolflixMain">
-        </div>
+          <div>
+            <img :src="logoImg">
+          </div>
+
+          <div>
+            <ul>
+
+              <li>
+                <a href="#">
+                  <span>
+                    Home
+                  </span>
+                  <i class="fas fa-chevron-down"></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <span>
+                    Shop
+                  </span>
+                  <i class="fas fa-chevron-down"></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <span>
+                    Products
+                  </span>
+                  <i class="fas fa-chevron-down"></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <span>
+                    Categories
+                  </span>
+                  <i class="fas fa-chevron-down"></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <span>
+                    News
+                  </span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <span>
+                    Elements
+                  </span>
+                  <i class="fas fa-chevron-down"></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <span>
+                    SHOP NOW!
+                  </span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <span>
+                    <i class="fas fa-search"></i>
+                  </span>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+
+        </nav> <!-- END OF LOWER SECTION OF HEADER -->
 
 
-        <!-- START OF FILM CONTAINER -->
+      </header> <!-- END OF HEADER -->
 
-        <div v-for="film in films" class="container">
-
-          <div class="box films">
-            <span></span>
-            <div class="content">
-
-              <ul>
-
-                <li>
-                  <h2>{{ cutText(film.title, 30, "...") }}</h2>
-                </li>
-
-                <li>
-                  <p><i>{{ cutText(film.original_title, 40, "...") }}</i></p>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <img v-if="flagFilm[film.original_language]" :src="film.srcFlag"> <!-- SEE line 70 of JS -->
-                    <p v-else>{{ film.original_language }}</p>
-                  </a>
-                </li>
-
-                <li>
-                  <!-- <p>{{ film.vote_average / 2 }}</p> -->
-                  <i v-for="i in getFilledStar(film.vote_average)" class ="fas fa-star"></i>
-                  <i v-for="i in getEmptyStar(film.vote_average)" class ="far fa-star"></i>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <img v-if="film.poster_path" :src="'https://image.tmdb.org/t/p/' + 'w342/' + film.poster_path">
-                    <img v-else src="img/boolflix.jpg" id="boolflixLogo">
-                  </a>
-                </li>
-
-              </ul>
-
-            </div> <!-- END OF CONTENT -->
-
-          </div> <!-- END OF BOX FILMS -->
-
-        </div>  <!-- END OF CONTAINER -->
-
-
-        <!-- START OF SERIES CONTAINER -->
-
-        <div v-for="serie in series" class="container otherContainer">
-
-          <div class="box series">
-            <span></span>
-            <div class="content">
-
-              <ul>
-
-                <li>
-                  <h2>{{ cutText(serie.name, 30, "...") }}</h2>
-                </li>
-
-                <li>
-                  <p><i>{{ cutText(serie.original_name, 40, "...") }}</i></p>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <img v-if="flagFilm[serie.original_language]" :src="flagFilm[serie.original_language]">
-                    <p v-else>{{ serie.original_language }}</p>
-                  </a>
-                </li>
-
-                <li>
-                  <!-- <p>{{ serie.vote_average / 2 }}</p> -->
-                  <i v-for="i in getFilledStar(serie.vote_average)" class ="fas fa-star"></i>
-                  <i v-for="i in getEmptyStar(serie.vote_average)" class ="far fa-star"></i>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <img v-if="serie.poster_path" :src="'https://image.tmdb.org/t/p/' + 'w342/' + serie.poster_path">
-                    <img v-else src="img/boolflix.jpg" id="boolflixLogo">
-                  </a>
-                </li>
-
-              </ul>
-
-            </div> <!-- END OF CONTENT -->
-
-          </div> <!-- END OF BOX SERIES -->
-
-        </div> <!-- END OF CONTAINER -->
-
-      </main>
 
     </section><!-- END OF DANNY VUE -->
 
