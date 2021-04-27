@@ -21,6 +21,7 @@
   --seashell-grey: #8B8386;
   --socialGrey: #575c61;
   --batmanGrey: #fafafa;
+  --some-other-grey: #f6f6f6;
 }
 
 * {
@@ -246,26 +247,73 @@ nav div:last-of-type li:nth-child(7) a:hover {
 }
 
 /* ---------------------------------- MAIN ---------------------------------- */
+
 main section:first-of-type {
+  height: 100px;
   display: flex;
   justify-content: center;
-  height: 200px;
 }
 
+/* height brings up the line on the text. Border-bottom creates the line */
 main section:first-of-type div {
   align-self: center;
+  position: relative;
   width: 60%;
-  height: 3.7rem;
+  height: 0.7rem;
   border-bottom: 2px solid rgba(220, 220, 220, 0.7);
 }
 
-/* main section:first-of-type h3 {
+/* Padding creates the space around the H3 (along with the background-color white) */
+main section:first-of-type h3 {
   font-size: 46px;
   background-color: white;
   color: black;
   position: absolute;
-  bottom: 50%
-  right: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   padding: 0px 30px;
-} */
+}
+
+main section:nth-child(2) div:first-of-type {
+  text-align: center;
+  font-size: 18px;
+  color: var(--socialGrey);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* This is the the div at line 159 of HTML  */
+main section:nth-child(2) div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+
+.gender {
+  width: 500px;
+  height: 50px;
+  display: flex;
+  margin: 50px 0px;
+  border: 1px solid rgba(220, 220, 220, 0.7);
+}
+
+.gender div {
+  width: calc(100% / 3);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.gender div a {
+  align-self: center;
+}
+
+.gender div:first-of-type,
+.gender div:nth-child(2) {
+  border-right: 1px solid rgba(220, 220, 220, 0.7);
+}
+
+.gender div:last-of-type,
+.gender div:nth-child(2) {
+  background-color: var(--some-other-grey);
+}
