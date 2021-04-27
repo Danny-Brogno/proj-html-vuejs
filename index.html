@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- FAVICON -->
+  <link rel="icon" sizes="16x16" href="img/favicon.png">
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <!-- J QUERY -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- VUE -->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <!-- AXIOS -->
+  <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- MY JS -->
+  <script src="js/script.js"></script>
+  <title>Boolflix</title>
+
+  <body>
+
+    <section id="vueDanny">
+
+      <header>
+
+        <nav>
+
+          <!-- TOP LEFT LOGO IMG -->
+          <div>
+            <img :src="boolflixHeader">
+          </div>
+
+          <!-- TOP RIGHT INPUT AND BUTTON -->
+          <div>
+            <input type="text" placeholder="Search Films/Series" v-model="movieListInput" @keyup.enter="apiFunction">
+            <button type="button" name="button" @click="apiFunction">GO!</button>
+            <div>
+              <i class="fas fa-square"></i>
+              <p>Movies</p>
+              <i class="fas fa-square"></i>
+              <p>Series</p>
+            </div>
+          </div>
+
+        </nav>
+
+      </header>
+
+      <main>
+
+        <!-- MIDDLE SECTION WITH TWO DISAPPEARING IMAGES -->
+        <div v-if="showImage" id="disappearingPic">
+          <img :src="greyBackground">
+          <img :src="boolflixMain">
+        </div>
+
+
+        <!-- START OF FILM CONTAINER -->
+
+        <div v-for="film in films" class="container">
+
+          <div class="box films">
+            <span></span>
+            <div class="content">
+
+              <ul>
+
+                <li>
+                  <h2>{{ cutText(film.title, 30, "...") }}</h2>
+                </li>
+
+                <li>
+                  <p><i>{{ cutText(film.original_title, 40, "...") }}</i></p>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img v-if="flagFilm[film.original_language]" :src="film.srcFlag"> <!-- SEE line 70 of JS -->
+                    <p v-else>{{ film.original_language }}</p>
+                  </a>
+                </li>
+
+                <li>
+                  <!-- <p>{{ film.vote_average / 2 }}</p> -->
+                  <i v-for="i in getFilledStar(film.vote_average)" class ="fas fa-star"></i>
+                  <i v-for="i in getEmptyStar(film.vote_average)" class ="far fa-star"></i>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img v-if="film.poster_path" :src="'https://image.tmdb.org/t/p/' + 'w342/' + film.poster_path">
+                    <img v-else src="img/boolflix.jpg" id="boolflixLogo">
+                  </a>
+                </li>
+
+              </ul>
+
+            </div> <!-- END OF CONTENT -->
+
+          </div> <!-- END OF BOX FILMS -->
+
+        </div>  <!-- END OF CONTAINER -->
+
+
+        <!-- START OF SERIES CONTAINER -->
+
+        <div v-for="serie in series" class="container otherContainer">
+
+          <div class="box series">
+            <span></span>
+            <div class="content">
+
+              <ul>
+
+                <li>
+                  <h2>{{ cutText(serie.name, 30, "...") }}</h2>
+                </li>
+
+                <li>
+                  <p><i>{{ cutText(serie.original_name, 40, "...") }}</i></p>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img v-if="flagFilm[serie.original_language]" :src="flagFilm[serie.original_language]">
+                    <p v-else>{{ serie.original_language }}</p>
+                  </a>
+                </li>
+
+                <li>
+                  <!-- <p>{{ serie.vote_average / 2 }}</p> -->
+                  <i v-for="i in getFilledStar(serie.vote_average)" class ="fas fa-star"></i>
+                  <i v-for="i in getEmptyStar(serie.vote_average)" class ="far fa-star"></i>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img v-if="serie.poster_path" :src="'https://image.tmdb.org/t/p/' + 'w342/' + serie.poster_path">
+                    <img v-else src="img/boolflix.jpg" id="boolflixLogo">
+                  </a>
+                </li>
+
+              </ul>
+
+            </div> <!-- END OF CONTENT -->
+
+          </div> <!-- END OF BOX SERIES -->
+
+        </div> <!-- END OF CONTAINER -->
+
+      </main>
+
+    </section><!-- END OF DANNY VUE -->
+
+  </body>
+</html>
