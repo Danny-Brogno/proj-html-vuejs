@@ -39,6 +39,14 @@ function vueInit() {
         {
           "name":"News",
           "chevron": false
+        },
+        {
+          "name":"Elements",
+          "chevron": true
+        },
+        {
+          "name":"Shop Now",
+          "chevron": false
         }
 
       ]

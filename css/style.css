@@ -179,7 +179,7 @@ nav div:last-of-type > ul > li:first-of-type {
 }
 
 /* THIS IS THE "SHOP NOW "BUTTON" */
-nav div:last-of-type li:nth-child(6) a {
+nav div:last-of-type li:nth-child(7) a {
   padding: 20px 60px;
   background-color: var(--scottish-blue);
   color: white;
@@ -189,11 +189,83 @@ nav div:last-of-type li:nth-child(6) a {
 
 /* SHOP NOW "BUTTON" and Search have NO border top */
 nav div:last-of-type ul li:last-of-type:hover,
-nav div:last-of-type li:nth-child(6):hover {
+nav div:last-of-type li:nth-child(7):hover {
   border-color: transparent;
 }
 
 /* OH HOVER THE "BUTTON" change color on hover*/
-nav div:last-of-type li:nth-child(6) a:hover {
+nav div:last-of-type li:nth-child(7) a:hover {
   background-color: var(--lighter-blue);
 }
+
+/* ----------------------------- JUMBOTRON ---------------------------------- */
+
+.jumbotron {
+  width: 100%;
+  height: 650px;
+  background-image: url(../img/other-img/home1_slide_three_bg_2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.jumbotron div:first-of-type {
+  font-size: 60px;
+  color: white;
+  align-self: center;
+}
+
+.jumbotron div:nth-child(2) {
+  margin-top: 20px;
+  font-size: 20px;
+  color: white;
+  font-weight: lighter;
+  font-family: 'Roboto', sans-serif;
+  align-self: center;
+}
+
+.jumbotron div:nth-child(3) {
+  margin-top: 60px;
+  align-self: center;
+  color: white;
+  font-weight: bolder;
+}
+
+.jumbotron div:nth-child(3) a {
+  padding: 20px 50px;
+  border: 1px solid white;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.jumbotron div:nth-child(3) a:first-of-type {
+  margin-right: 20px;
+}
+
+/* ---------------------------------- MAIN ---------------------------------- */
+main section:first-of-type {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+}
+
+main section:first-of-type div {
+  align-self: center;
+  width: 60%;
+  height: 3.7rem;
+  border-bottom: 2px solid rgba(220, 220, 220, 0.7);
+}
+
+/* main section:first-of-type h3 {
+  font-size: 46px;
+  background-color: white;
+  color: black;
+  position: absolute;
+  bottom: 50%
+  right: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0px 30px;
+} */
