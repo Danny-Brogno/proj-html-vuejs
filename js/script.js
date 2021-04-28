@@ -49,6 +49,37 @@ function vueInit() {
           "chevron": false
         }
 
+      ], // END OF navbar
+
+      slideImg: [
+        {
+          "picture": "img/other-img/black_elegant_leather_jacket-200x260.jpg",
+          "kind": "Black Leather Jacket",
+          "gender": "Men, Jackets, Jeans",
+          "discount": true,
+          "price": 200
+        },
+        {
+          "picture": "img/other-img/black_leather_suit-200x260.jpg",
+          "kind": "Black Leather Suit",
+          "gender": "Men, Jackets",
+          "discount": false,
+          "price": 176
+        },
+        {
+          "picture": "img/other-img/blue_jacket_and_white_stripe_tee-200x260.jpg",
+          "kind": "Blue Jacket & White Stripe Tee",
+          "gender": "Men, Jackets, Suits",
+          "discount": false,
+          "price": 580
+        },
+        {
+          "picture": "img/other-img/modern_black_leather_suit-200x260.jpg",
+          "kind": "Modern Black Leather Suit",
+          "gender": "Men, Jackets",
+          "discount": false,
+          "price": 96
+        },
       ]
     }, // END OF DATA
 

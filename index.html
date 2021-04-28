@@ -177,6 +177,38 @@
               </div>
 
             </div>
+
+          </div>
+
+          <!-- SLIDING IMAGES SECTION -->
+
+          <div id="sliding-images-section">
+            <ul v-for="type in slideImg">
+
+              <li>
+                <a href="#">
+
+                  <div>
+                    <img :src="type.picture">
+                  </div>
+
+                  <div>
+                    <h3>{{ type.kind }}</h3>
+                  </div>
+
+                  <div>
+                    <p> {{ type.gender }}</p>
+                  </div>
+
+                  <div>
+                    <span v-if="type.discount == true">{{ type.discount }}</span>
+                    <span>${{ type.price }}</span>
+                  </div>
+
+                </a>
+              </li>
+
+            </ul>
           </div>
 
         </section>
@@ -184,6 +216,7 @@
       </main> <!-- END OF MAIN -->
 
       <footer> <!-- START OF FOOTER -->
+
       </footer> <!-- END OF FOOTER -->
 
     </section><!-- END OF DANNY VUE -->
