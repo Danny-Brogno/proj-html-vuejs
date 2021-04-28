@@ -17,6 +17,9 @@ function vueInit() {
 
     data: {
       "logoImg": "img/other-img/classic_shop_logo2x.png",
+      "bigPic1": "img/other-img/winter_collection_bg.jpg",
+      "bigPic2": "img/other-img/spring_collection_bg.jpg",
+      "bigPic3": "img/other-img/autumn_collection_bg.jpg",
 
       navbar: [
 

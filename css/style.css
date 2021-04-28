@@ -390,7 +390,7 @@ main section:nth-child(2) div:nth-child(2) {
   overflow: hidden;
   position: absolute;
   z-index: 1;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   top: 100%;
   left: 0;
 }
@@ -400,3 +400,31 @@ main section:nth-child(2) div:nth-child(2) {
 }
 
 /* ----------------------------- BIG IMAGE SECTION -------------------------- */
+
+.big-pictures {
+  width: 100%;
+  height: 300px;
+  background-color: red;
+}
+
+.big-pictures div:first-of-type {
+  display: flex;
+  height: 100%;
+}
+
+.big-pictures div:first-of-type div {
+  height: 100%;
+  width: calc(100% / 3);
+}
+
+.big-pictures div:first-of-type div:nth-child(1) {
+  background-color: forestgreen;
+}
+
+.big-pictures div:first-of-type div:nth-child(2) {
+  background-color: navy;
+}
+
+.big-pictures div:first-of-type div:nth-child(3) {
+  background-color: var(--roman-red);
+}
