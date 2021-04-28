@@ -183,13 +183,22 @@
           <!-- SLIDING IMAGES SECTION -->
 
           <div id="sliding-images-section">
+
             <ul v-for="type in slideImg">
 
               <li>
                 <a href="#">
 
                   <div>
-                    <img :src="type.picture">
+                    <div class="card">
+                      <div class="main-content">
+                        <img :src="type.picture">
+                        <div class="overlay-content">
+                          <p><i class="fas fa-shopping-cart"></i>&#160; Add to cart</p>
+                          <p><i class="fas fa-list"></i>&#160; Details</p>
+                        </div> <!-- END OF overlay-content -->
+                      </div> <!-- END OF main-content -->
+                    </div> <!-- END OF CARD -->
                   </div>
 
                   <div>
@@ -209,7 +218,12 @@
               </li>
 
             </ul>
+
           </div>
+
+        </section> <!--END OF sliding-images-section -->
+
+        <section class="big-pictures"> <!--START OF BIG SECTION -->
 
         </section>
 
