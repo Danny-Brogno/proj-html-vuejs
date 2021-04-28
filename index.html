@@ -191,14 +191,20 @@
 
                   <div>
                     <div class="card">
+
                       <div class="main-content">
+
                         <img :src="type.picture">
+
                         <div class="overlay-content">
                           <p><i class="fas fa-shopping-cart"></i>&#160; Add to cart</p>
                           <p><i class="fas fa-list"></i>&#160; Details</p>
                         </div> <!-- END OF overlay-content -->
+
                       </div> <!-- END OF main-content -->
+
                     </div> <!-- END OF CARD -->
+
                   </div>
 
                   <div>
@@ -210,7 +216,7 @@
                   </div>
 
                   <div>
-                    <span v-if="type.discount == true">{{ type.discount }}</span>
+                    <span v-if="type.fullprice" id="special-span">${{ type.fullprice }}</span>
                     <span>${{ type.price }}</span>
                   </div>
 
@@ -227,15 +233,37 @@
           <div>
 
             <div>
-              <!-- <img :src="bigPic1"> -->
+              <img :src="bigPic1">
+              <!-- v-bind:style="{ 'background-image': 'url('img/other-img/winter_collection_bg.jpg')' }" -->
+              <h2>Winter Collection</h2>
+              <h3>STYLISH AND WARM</h3>
+              <div>
+                <a href="#">
+                  <p>VIEW MORE</p>
+                </a>
+              </div>
             </div>
 
             <div>
-              <!-- <img :src="bigPic2"> -->
+              <img :src="bigPic2">
+              <h2>Spring Collection</h2>
+              <h3>BRIGHT AND COLURFUL</h3>
+              <div>
+                <a href="#">
+                  <p>VIEW MORE</p>
+                </a>
+              </div>
             </div>
 
             <div>
-              <!-- <img :src="bigPic3"> -->
+              <img :src="bigPic3">
+              <h2>Autumn Collection</h2>
+              <h3>RICH AND COMFORTABLE</h3>
+              <div>
+                <a href="#">
+                  <p>VIEW MORE</p>
+                </a>
+              </div>
             </div>
 
           </div>

@@ -60,6 +60,7 @@ function vueInit() {
           "kind": "Black Leather Jacket",
           "gender": "Men, Jackets, Jeans",
           "discount": true,
+          "fullprice": 235,
           "price": 200
         },
         {

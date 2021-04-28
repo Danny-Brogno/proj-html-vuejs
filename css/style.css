@@ -276,6 +276,10 @@ main section:first-of-type h3 {
   padding: 0px 30px;
 }
 
+main section:nth-child(2) {
+  padding-bottom: 70px;
+}
+
 main section:nth-child(2) div:first-of-type {
   text-align: center;
   font-size: 18px;
@@ -349,7 +353,7 @@ main section:nth-child(2) div:nth-child(2) {
 /* PICTURE */
 #sliding-images-section ul li img {
   width: 300px;
-  height: 300px;
+  height: 400px;
 }
 
 /* BIGGER TEXT */
@@ -370,6 +374,12 @@ main section:nth-child(2) div:nth-child(2) {
   color: var(--scottish-blue);
 }
 
+/* THIS IS THE */
+#sliding-images-section ul li div:nth-child(4) #special-span {
+  text-decoration: line-through;
+  font-size: smaller;
+  padding-right: 10px;
+}
 /* -------------- ANIMATION --------------------- */
 
 .card {
@@ -390,7 +400,7 @@ main section:nth-child(2) div:nth-child(2) {
   overflow: hidden;
   position: absolute;
   z-index: 1;
-  transition-duration: 0.3s;
+  transition-duration: 0.4s;
   top: 100%;
   left: 0;
 }
@@ -402,9 +412,9 @@ main section:nth-child(2) div:nth-child(2) {
 /* ----------------------------- BIG IMAGE SECTION -------------------------- */
 
 .big-pictures {
+  margin-bottom: 80px;
   width: 100%;
-  height: 300px;
-  background-color: red;
+  height: 600px;
 }
 
 .big-pictures div:first-of-type {
@@ -415,16 +425,60 @@ main section:nth-child(2) div:nth-child(2) {
 .big-pictures div:first-of-type div {
   height: 100%;
   width: calc(100% / 3);
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
-.big-pictures div:first-of-type div:nth-child(1) {
-  background-color: forestgreen;
+.big-pictures div:first-of-type img {
+  width: 100%;
+  height: 100%;
 }
 
-.big-pictures div:first-of-type div:nth-child(2) {
-  background-color: navy;
+/* THIS IS THE BIG TEXT INSIDE THE IMAGE */
+.big-pictures div:first-of-type div h2 {
+  position: absolute;
+  align-self: center;
+  font-size: 45px;
+  color: white;
 }
 
-.big-pictures div:first-of-type div:nth-child(3) {
-  background-color: var(--roman-red);
+/* THIS IS THE TEXT UNDERNEATH THE BIG TEXT */
+.big-pictures div:first-of-type div h3 {
+  position: absolute;
+  bottom: 37%;
+  align-self: center;
+  font-size: 20px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+}
+
+/* THIS IS THE INPUT/BUTTON/ANCHOR UNDERNEATH THE MIDDLE TEXT */
+.big-pictures div:first-of-type div div {
+  height: 100%;
+  position: absolute;
+  bottom: 25%;
+  align-self: center;
+  width: 140px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* THIS IS WHAT IS INSIDE THE ANCHOR (DIV-A-P) */
+.big-pictures div:first-of-type div div:nth-child(4) {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.big-pictures div:first-of-type div div:nth-child(4):hover {
+  background-color: rgba(0, 0, 0, 0.0);
+
 }
