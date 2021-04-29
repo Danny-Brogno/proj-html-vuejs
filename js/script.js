@@ -54,6 +54,7 @@ function vueInit() {
 
       ], // END OF navbar
 
+      // (FIRST SLIDER IMG)
       slideImg: [
         {
           "picture": "img/other-img/black_elegant_leather_jacket.jpg",
@@ -86,6 +87,7 @@ function vueInit() {
         },
       ],
 
+      // (SECOND SLIDER IMG)
       smallSliderImg: [
         {
           "picture": "img/other-img/spring_printed_dress-400x520.jpg",
@@ -122,6 +124,46 @@ function vueInit() {
           "gender": "T - Shirts, Women",
           "discount": false,
           "price": 57
+        }
+      ],
+
+      // (THIRD SLIDER IMG)
+      biggestSliderImg: [
+        {
+          "picture": "img/other-img/black_elegant_leather_jacket.jpg",
+          "kind": "Black Leather Jacket",
+          "gender": "Men, Jackets, Jeans",
+          "discount": true,
+          "fullprice": 235,
+          "price": 200
+        },
+        {
+          "picture": "img/other-img/hipster_black_top.jpg",
+          "kind": "Hipster Black Top",
+          "gender": "T - Shirts, Women",
+          "discount": false,
+          "price": 57
+        },
+        {
+          "picture": "img/other-img/black_leather_suit.jpg",
+          "kind": "Black Leather Suit",
+          "gender": "Men, Jackets",
+          "discount": false,
+          "price": 176
+        },
+        {
+          "picture": "img/other-img/spring_printed_dress.jpg",
+          "kind": "Spring Painted Dress",
+          "gender": "Dress, Women",
+          "discount": false,
+          "price": 47
+        },
+        {
+          "picture": "img/other-img/modern_love_tee.jpg",
+          "kind": "Modern Love Tee",
+          "gender": "T - Shirts, Women",
+          "discount": false,
+          "price": 68
         }
       ]
     }, // END OF DATA

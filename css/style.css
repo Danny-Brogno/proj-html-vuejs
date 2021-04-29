@@ -42,16 +42,6 @@ a {
 li {
   list-style: none;
 }
-/* ------------------- CLASSES TO BE USED MULTIPLE TIMES -------------------- */
-
-.flex-row {
-  display: flex;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
 
 /* -------------------------------HEADER------------------------------------- */
 
@@ -64,7 +54,7 @@ header {
 /* --------- UPPER HEADER ----------- */
 header div {
   height: 80px;
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -120,7 +110,7 @@ header hr {
 /* --------- LOWER HEADER ----------- */
 nav {
   height: 120px;
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   display: flex;
 }
@@ -248,9 +238,11 @@ nav div:last-of-type li:nth-child(7) a:hover {
 
 /* ---------------------------------- MAIN ---------------------------------- */
 
-/* There are two of these: one after the jumbotron aond one in the small-slider section */
+/* SLIDER ARE USED  */
+/* There are THREE of these: one after the jumbotron, one in the small-slider section and one in the biggest slider image section */
 main section:first-of-type,
-.small-slider article {
+.small-slider article,
+.biggest-slider-image article {
   padding-top: 30px;
   height: 100px;
   display: flex;
@@ -259,17 +251,19 @@ main section:first-of-type,
 
 /* height brings up the line on the text. Border-bottom creates the line */
 main section:first-of-type div,
-.small-slider article div {
+.small-slider article div,
+.biggest-slider-image article div {
   align-self: center;
   position: relative;
-  width: 60%;
+  width: 70%;
   height: 0.7rem;
   border-bottom: 2px solid rgba(220, 220, 220, 0.7);
 }
 
 /* Padding creates the space around the H3 (along with the background-color white) */
 main section:first-of-type h3,
-.small-slider article div h3 {
+.small-slider article div h3,
+.biggest-slider-image article h3 {
   font-size: 46px;
   background-color: white;
   color: black;
@@ -281,12 +275,14 @@ main section:first-of-type h3,
 }
 
 main section:nth-child(2),
-.small-slider div:nth-child(2) {
+.small-slider div:nth-child(2),
+.biggest-slider-image div:nth-child(2) {
   padding-bottom: 70px;
 }
 
 main section:nth-child(2) div:first-of-type,
-.small-slider div:nth-child(2) {
+.small-slider div:nth-child(2),
+.biggest-slider-image div:nth-child(2) {
   text-align: center;
   font-size: 18px;
   color: var(--socialGrey);
@@ -338,15 +334,14 @@ main section:nth-child(2) div:nth-child(2) {
 /* There are more similar sections scrolling down the page */
 #sliding-images-section,
 .smaller-sliding-images-section {
-  width: 60%;
+  width: 70%;
   height: 500px;
   margin: 0 auto;
   display: flex;
-  position: relative;
 }
 
 #sliding-images-section ul {
-  width: calc(100% / 4);
+  width: 100%;
   height: 100%;
   display: flex;
 }
@@ -399,7 +394,7 @@ main section:nth-child(2) div:nth-child(2) {
 }
 
 .card .overlay-content {
-  width: 90%;
+  width: 100%;
   height: 100%;
   background: linear-gradient(royalblue, pink);
   opacity: 0.9;
@@ -502,7 +497,7 @@ main section:nth-child(2) div:nth-child(2) {
 
 .smaller-sliding-images-section ul {
   height: 100%;
-  width: 60%;
+  width: 70%;
   display: flex;
   justify-content: center;
 }
@@ -539,7 +534,7 @@ display:flex;
 #arrow-front {
   position: absolute;
   z-index: 50;
-  right: -12px;
+  right: 0px;
   top: 114px;
 }
 
@@ -550,6 +545,12 @@ display:flex;
   color: white;
   font-size: smaller;
 }
+
+.smaller-sliding-images-section #arrow-front .fa-chevron-right {
+  position: relative;
+  left: 12px;
+}
+
 /* ----------------------- CONFETTI SECTION --------------------------------- */
 
 .confetti-background {
@@ -558,14 +559,14 @@ display:flex;
   background-image: url(../img/other-img/bkgd_confetti-compressor.jpg);
   background-size: cover;
   background-position: center;
-  margin-bottom: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .confetti-background div {
-  width: 60%;
+  width: 70%;
   height: 400px;
   display: flex;
   justify-content: space-between;
@@ -626,3 +627,72 @@ display:flex;
 .confetti-background article > div:hover {
   background-color: rgba(0, 0, 0, 0.0);
 }
+
+/* -------------------- BIGGEST SLIDER IMAGE SECTION -------------------------*/
+
+.biggest-slider-image {
+  width: 100%;
+}
+
+.biggest-sliding-image-section {
+  width: 100%;
+  height: 100%;
+}
+
+.biggest-sliding-image-section ul li img {
+  height: 100%;
+  width: 100%;
+}
+
+.arrow-before, .arrow-after {
+display:flex;
+}
+
+.arrow-before {
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  z-index: 50;
+  top: 200px;
+}
+
+.arrow-after {
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  z-index: 50;
+  right: 0px;
+  top: 200px;
+}
+
+.arrow-after .fa-chevron-right, .arrow-before .fa-chevron-left {
+  padding: 25px 10px;
+  background-color: #c1c1c1;
+  color: white;
+  font-size: smaller;
+}
+
+.biggest-sliding-image-section {
+  padding-bottom: 100px;
+}
+/* ------------------------- WORK IN PROGRESS ------------------------------- */
+
+
+
+
+
+.work-in-progress {
+  width: 100%;
+  height: 800px;
+  background-image: url(../img/lavori-in-corso.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 100px;
+}
+
+
+
+
+
+/* -------------------------------- FOOTER -----------------------------------*/

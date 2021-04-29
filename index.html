@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="css/style.css">
   <!-- MY JS -->
   <script src="js/script.js"></script>
-  <title>My project</title>
+  <title>Classic Shop - Danny Brogno</title>
 
   <body>
 
@@ -350,9 +350,11 @@
               </a>
             </div>
 
-          </div> <!--END OF sliding-images-section -->
+          </div> <!--END OF sliding-images -->
 
         </section>
+
+        <!--END OF sliding-images-section -->
 
         <!-- CONFETTI SECTION (with two IMG in the middle) -->
 
@@ -370,7 +372,7 @@
                     <p>View More</p>
                   </a>
                 </div>
-                
+
               </article>
 
             </div>
@@ -393,6 +395,100 @@
 
           </div>
         </section>
+
+        <!-- END OF CONFETTI BACKGROUND SECTION -->
+
+        <!-- START OF BIGGEST SLIDER IMAGE SECTION -->
+
+        <section class="biggest-slider-image">
+
+          <article>
+            <div>
+              <a href="#">
+                <h3>New Arrivals</h3>
+              </a>
+            </div>
+          </article>
+
+          <div>
+            <h4>Brand new products from top designers</h4>
+          </div>
+
+          <!-- BIGGEST SLIDER STARTS HERE ONWARDS -->
+
+          <div class="smaller-sliding-images-section biggest-sliding-image-section">
+
+            <div class="arrow-before">
+              <a href="#">
+                <i class="fas fa-chevron-left"></i>
+              </a>
+            </div>
+
+            <ul v-for="elemento in biggestSliderImg">
+
+              <li>
+                <a href="#">
+
+                  <div>
+                    <div class="card">
+
+                      <div class="main-content">
+
+
+                        <img :src="elemento.picture">
+
+                        <div class="overlay-content biggest-overlay-content">
+
+                          <div>
+                            <h3>{{ elemento.kind }}</h3>
+                          </div>
+
+                          <div>
+                            <p> {{ elemento.gender }}</p>
+                          </div>
+
+                          <div>
+                            <span v-if="elemento.fullprice" id="special-span">${{ elemento.fullprice }}</span>
+                            <span>${{ elemento.price }}</span>
+                          </div>
+
+                          <div>
+                            <p><i class="fas fa-shopping-cart"></i>&#160; Add to cart</p>
+                          </div>
+
+                          <div>
+                            <p><i class="fas fa-list"></i>&#160; Details</p>
+                          </div>
+
+                        </div> <!-- END OF overlay-content -->
+
+                      </div> <!-- END OF main-content -->
+
+                    </div> <!-- END OF CARD -->
+
+                  </div>
+
+                </a>
+              </li>
+
+            </ul>
+
+            <div class="arrow-after">
+              <a href="#">
+                <i class="fas fa-chevron-right"></i>
+              </a>
+            </div>
+
+          </div> <!-- BIGGEST SLIDER ENDS HERE -->
+
+        </section>
+
+        <!-- END OF BIGGER SLIDER SECTION -->
+
+        <!-- START OF WORK IN PROGRESS -->
+        <section class="work-in-progress">
+        </section>
+        <!-- END OF WORK IN PROGRESS -->
 
       </main> <!-- END OF MAIN -->
 
