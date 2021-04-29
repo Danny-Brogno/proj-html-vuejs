@@ -696,3 +696,49 @@ display:flex;
 
 
 /* -------------------------------- FOOTER -----------------------------------*/
+
+.grey-brands {
+  margin-bottom: 50px;
+  width: 100%;
+  height: 350px;
+  background-color: var(--some-other-grey);
+}
+
+.grey-brands div {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: green;
+}
+
+.grey-brands figcaption {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.grey-brands figcaption div {
+  width: calc(100% / 5);
+  height: 100%;
+  color: black;
+}
+
+.grey-brands figcaption div:first-of-type {
+  background-color: lime;
+}
+
+.grey-brands figcaption div:nth-child(2) {
+  background-color: royalblue;
+}
+
+.grey-brands figcaption div:nth-child(3) {
+  background-color: grey;
+}
+
+.grey-brands figcaption div:nth-child(4) {
+  background-color: silver;
+}
+
+.grey-brands figcaption div:last-of-type {
+  background-color: aqua;
+}
