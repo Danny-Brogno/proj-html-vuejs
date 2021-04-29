@@ -84,6 +84,45 @@ function vueInit() {
           "discount": false,
           "price": 96
         },
+      ],
+
+      smallSliderImg: [
+        {
+          "picture": "img/other-img/spring_printed_dress-400x520.jpg",
+          "kind": "Spring Painted Dress",
+          "gender": "Dress, Women",
+          "discount": false,
+          "price": 47
+        },
+        {
+          "picture": "img/other-img/modern_love_tee-400x520.jpg",
+          "kind": "Modern Love Tee",
+          "gender": "T - Shirts, Women",
+          "discount": false,
+          "price": 68
+        },
+        {
+          "picture": "img/other-img/black_leather_jacket-400x520.jpg",
+          "kind": "Black Jacket",
+          "gender": "Women, Jackets",
+          "discount": false,
+          "price": 580
+        },
+        {
+          "picture": "img/other-img/black_elegant_leather_jacket-400x520.jpg",
+          "kind": "Black Leather Jacket",
+          "gender": "Men, Jackets, Jeans",
+          "discount": true,
+          "fullprice": 235,
+          "price": 200
+        },
+        {
+          "picture": "img/other-img/hipster_black_top-400x520.jpg",
+          "kind": "Hipster Black Top",
+          "gender": "T - Shirts, Women",
+          "discount": false,
+          "price": 57
+        }
       ]
     }, // END OF DATA
 

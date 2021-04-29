@@ -141,6 +141,7 @@
 
       <main> <!-- START OF MAIN -->
 
+        <!-- THIS DIV WILL BE REAPEATED SO I'VE PUT IT IN A DEDICATED SECTIONS -->
         <section>
           <div>
             <a href="#">
@@ -225,16 +226,15 @@
 
             </ul>
 
-          </div>
+          </div> <!--END OF sliding-images-section -->
 
-        </section> <!--END OF sliding-images-section -->
+        </section>
 
-        <section class="big-pictures"> <!--START OF BIG SECTION -->
+        <section class="big-pictures"> <!--START OF BIG PICTURE SECTION -->
           <div>
 
             <div>
               <img :src="bigPic1">
-              <!-- v-bind:style="{ 'background-image': 'url('img/other-img/winter_collection_bg.jpg')' }" -->
               <h2>Winter Collection</h2>
               <h3>STYLISH AND WARM</h3>
               <div>
@@ -267,6 +267,95 @@
             </div>
 
           </div>
+        </section>
+
+        <!-- SMALLER SLIDER SECTION -->
+
+        <section class="small-slider">
+
+          <article>
+            <div>
+              <a href="#">
+                <h3>Best Sellers</h3>
+              </a>
+            </div>
+          </article>
+
+          <div>
+            <h4>Must have products from our top sellers</h4>
+          </div>
+
+          <!-- SMALLER SLIDING IMAGES SECTION -->
+
+          <div class="smaller-sliding-images-section">
+
+            <div id="arrow-back">
+              <a href="#">
+                <i class="fas fa-chevron-left"></i>
+              </a>
+            </div>
+
+            <ul v-for="tipo in smallSliderImg">
+
+              <li>
+                <a href="#">
+
+                  <div>
+                    <div class="card">
+
+                      <div class="main-content">
+
+
+                        <img :src="tipo.picture">
+
+                        <div class="overlay-content smaller-overlay-content">
+
+                          <div>
+                            <h3>{{ tipo.kind }}</h3>
+                          </div>
+
+                          <div>
+                            <p> {{ tipo.gender }}</p>
+                          </div>
+
+                          <div>
+                            <span v-if="tipo.fullprice" id="special-span">${{ tipo.fullprice }}</span>
+                            <span>${{ tipo.price }}</span>
+                          </div>
+
+                          <div>
+                            <p><i class="fas fa-shopping-cart"></i>&#160; Add to cart</p>
+                          </div>
+
+                          <div>
+                            <p><i class="fas fa-list"></i>&#160; Details</p>
+                          </div>
+
+                        </div> <!-- END OF overlay-content -->
+
+                      </div> <!-- END OF main-content -->
+
+                    </div> <!-- END OF CARD -->
+
+                  </div>
+
+                </a>
+              </li>
+
+            </ul>
+
+            <div id="arrow-front">
+              <a href="#">
+                <i class="fas fa-chevron-right"></i>
+              </a>
+            </div>
+
+          </div> <!--END OF sliding-images-section -->
+
+        </section>
+
+        <section id="lol">
+          <h1>CIAO</h1>
         </section>
 
       </main> <!-- END OF MAIN -->

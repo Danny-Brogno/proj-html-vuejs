@@ -248,7 +248,9 @@ nav div:last-of-type li:nth-child(7) a:hover {
 
 /* ---------------------------------- MAIN ---------------------------------- */
 
-main section:first-of-type {
+/* There are two of these: one after the jumbotron aond one in the small-slider section */
+main section:first-of-type,
+.small-slider article {
   padding-top: 30px;
   height: 100px;
   display: flex;
@@ -256,7 +258,8 @@ main section:first-of-type {
 }
 
 /* height brings up the line on the text. Border-bottom creates the line */
-main section:first-of-type div {
+main section:first-of-type div,
+.small-slider article div {
   align-self: center;
   position: relative;
   width: 60%;
@@ -265,7 +268,8 @@ main section:first-of-type div {
 }
 
 /* Padding creates the space around the H3 (along with the background-color white) */
-main section:first-of-type h3 {
+main section:first-of-type h3,
+.small-slider article div h3 {
   font-size: 46px;
   background-color: white;
   color: black;
@@ -276,11 +280,13 @@ main section:first-of-type h3 {
   padding: 0px 30px;
 }
 
-main section:nth-child(2) {
+main section:nth-child(2),
+.small-slider div:nth-child(2) {
   padding-bottom: 70px;
 }
 
-main section:nth-child(2) div:first-of-type {
+main section:nth-child(2) div:first-of-type,
+.small-slider div:nth-child(2) {
   text-align: center;
   font-size: 18px;
   color: var(--socialGrey);
@@ -329,7 +335,9 @@ main section:nth-child(2) div:nth-child(2) {
 
 /* ------------------------ SLIDING IMAGES SECTION -------------------------- */
 
-#sliding-images-section {
+/* There are more similar sections scrolling down the page */
+#sliding-images-section,
+.smaller-sliding-images-section {
   width: 60%;
   height: 500px;
   margin: 0 auto;
@@ -343,14 +351,15 @@ main section:nth-child(2) div:nth-child(2) {
   display: flex;
 }
 
-#sliding-images-section ul li div {
+#sliding-images-section ul li div,
+.smaller-sliding-images-section ul li div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: left;
 }
 
-/* PICTURE */
+/* PICTURES */
 #sliding-images-section ul li img {
   width: 300px;
   height: 400px;
@@ -374,12 +383,14 @@ main section:nth-child(2) div:nth-child(2) {
   color: var(--scottish-blue);
 }
 
-/* THIS IS THE */
-#sliding-images-section ul li div:nth-child(4) #special-span {
+/* THIS IS THE SPAN WITH LINE OVER IT */
+#sliding-images-section #special-span,
+.smaller-sliding-images-section #special-span {
   text-decoration: line-through;
   font-size: smaller;
   padding-right: 10px;
 }
+
 /* -------------- ANIMATION --------------------- */
 
 .card {
@@ -480,5 +491,70 @@ main section:nth-child(2) div:nth-child(2) {
 
 .big-pictures div:first-of-type div div:nth-child(4):hover {
   background-color: rgba(0, 0, 0, 0.0);
+}
 
+/* --------------------- SMALLER SLIDING IMAGE SECTION ---------------------- */
+
+/* A lot of these classes are in the SLIDING IMAGES SECTION from line 336  */
+.smaller-sliding-images-section {
+  position: relative;
+}
+
+.smaller-sliding-images-section ul {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+/* PICTURES */
+.smaller-sliding-images-section ul li img {
+  height: 300px;
+}
+
+/* COLOR TEXT IN ALL DIV */
+.smaller-sliding-images-section ul li div,
+.smaller-sliding-images-section p{
+  color: white;
+}
+
+/* The overlay has to be bigger (compared to the previous one) */
+.card .smaller-overlay-content {
+  width: 100%;
+}
+
+#arrow-back,
+#arrow-front {
+display:flex;
+}
+
+#arrow-back {
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  z-index: 50;
+  top: 114px;
+}
+
+#arrow-front {
+  position: absolute;
+  z-index: 50;
+  right: -12px;
+  top: 114px;
+}
+
+#arrow-front .fa-chevron-right,
+#arrow-back .fa-chevron-left {
+  padding: 25px 10px;
+  background-color: #c1c1c1;
+  color: white;
+  font-size: smaller;
+}
+/* ------------------------------------LOL----------------------------------- */
+
+#lol {
+  display:flex;
+  justify-content: center;
+  font-size: 30px;
+  color: red;
 }
