@@ -493,13 +493,13 @@ main section:nth-child(2) div:nth-child(2) {
 /* A lot of these classes are in the SLIDING IMAGES SECTION from line 336  */
 .smaller-sliding-images-section {
   position: relative;
+  display:flex;
+  justify-content: center;
+  width:100%;
 }
 
 .smaller-sliding-images-section ul {
-  height: 100%;
-  width: 70%;
-  display: flex;
-  justify-content: center;
+
 }
 
 /* PICTURES */
@@ -513,42 +513,40 @@ main section:nth-child(2) div:nth-child(2) {
   color: white;
 }
 
-/* The overlay has to be bigger (compared to the previous one) */
+/* The overlay has to be bigger (compared to the previous SECTION) since the images are smaller */
 .card .smaller-overlay-content {
   width: 100%;
 }
 
-#arrow-back,
-#arrow-front {
-display:flex;
-}
-
-#arrow-back {
-  align-items: center;
-  align-content: center;
-  position: absolute;
-  z-index: 50;
-  top: 114px;
-}
-
-#arrow-front {
-  position: absolute;
-  z-index: 50;
-  right: 0px;
-  top: 114px;
-}
-
-#arrow-front .fa-chevron-right,
-#arrow-back .fa-chevron-left {
+/* THESE ARE THE ARROWS IN THE MIDDLE SECTION */
+.arrow-front-small-section .fa-chevron-right,
+.arrow-back-small-section .fa-chevron-left {
   padding: 25px 10px;
   background-color: #c1c1c1;
   color: white;
   font-size: smaller;
 }
 
-.smaller-sliding-images-section #arrow-front .fa-chevron-right {
-  position: relative;
-  left: 12px;
+/* THESE ARE THE ARROWS IN THE MIDDLE SECTION (small images)*/
+.arrow-back-small-section,
+.arrow-front-small-section {
+  display:flex;
+  position: absolute;
+  z-index: 50;
+}
+
+/* THESE ARE THE ARROWS IN THE MIDDLE SECTION (CENTRAL SLIDER)*/
+.arrow-front-small-section {
+  top: 115px;
+  right: 375px;
+}
+
+/* The last two classes refer to the single arrows*/
+.arrow-back-small-section {
+  align-items: center;
+  align-content: center;
+  top: 115px;
+  left: 375px;
 }
 
 /* ----------------------- CONFETTI SECTION --------------------------------- */
@@ -654,6 +652,7 @@ display:flex;
   position: absolute;
   z-index: 50;
   top: 200px;
+  left: 0px;
 }
 
 .arrow-after {
