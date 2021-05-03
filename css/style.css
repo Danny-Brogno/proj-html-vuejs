@@ -22,6 +22,9 @@
   --socialGrey: #575c61;
   --batmanGrey: #fafafa;
   --some-other-grey: #f6f6f6;
+  --footer-gray: #303337;
+  --envelope-gray:#74797f;
+  --bg-envelope: #2b2e32;
 }
 
 * {
@@ -696,8 +699,8 @@ display:flex;
 
 /* -------------------------------- FOOTER -----------------------------------*/
 
+/* START BRAND SECTION */
 .grey-brands {
-  margin-bottom: 50px;
   width: 100%;
   height: 400px;
   background-color: var(--some-other-grey);
@@ -707,12 +710,16 @@ display:flex;
   width: 70%;
   height: 90%;
   margin: 0 auto;
-  background-color: green;
+  display: flex;
+  justify-content: center;
 }
 
 .grey-brands h2 {
+  padding-top: 30px;
+  font-size: 18px;
   font-family: 'Roboto', sans-serif;
   text-align: center;
+  color: var(--socialGrey);
 }
 
 .grey-brands figcaption {
@@ -721,28 +728,76 @@ display:flex;
   display: flex;
 }
 
+.grey-brands figcaption img {
+  width: 50%;
+  height: 50%;
+  align-self: center;
+}
+
 .grey-brands figcaption div {
-  width: calc(100% / 5);
+  width: 100%;
   height: 100%;
   color: black;
 }
 
-.grey-brands figcaption div:first-of-type {
-  background-color: lime;
+/* END BRAND SECTION */
+
+/* START SUBSCRIBE SECTION */
+
+.subscribe-section {
+  width: 100%;
+  height: 200px;
+  background-color: var(--footer-gray);
 }
 
-.grey-brands figcaption div:nth-child(2) {
-  background-color: royalblue;
+.subscribe-section div {
+  width: 70%;
+  height: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.grey-brands figcaption div:nth-child(3) {
-  background-color: grey;
+.subscribe-section figure {
+  display: flex;
 }
 
-.grey-brands figcaption div:nth-child(4) {
-  background-color: silver;
+.subscribe-section figure i {
+  font-size: 40px;
+  color: var(--envelope-gray);
+  padding: 20px 20px;
+  background-color: var(--bg-envelope);
+  border-radius: 100%;
 }
 
-.grey-brands figcaption div:last-of-type {
-  background-color: aqua;
+.subscribe-section figure span {
+  margin: 25px 0px 0px 20px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
 }
+
+.subscribe-section form input {
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+}
+
+.subscribe-section form input:first-of-type {
+  width: 400px;
+  margin-right: 20px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.subscribe-section form input:last-of-type {
+  width: 150px;
+  background-color: var(--eleganBlue);
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* END SUBSCRIBE SECTION */
