@@ -165,7 +165,27 @@ function vueInit() {
           "discount": false,
           "price": 68
         }
+      ],
+
+      // BRANDS IN FOOTER
+      sponsorLogos: [
+        {
+            "picture": "img/other-img/b_logotype_6.png"
+        },
+        {
+            "picture": "img/other-img/b_logotype_7.png"
+        },
+        {
+            "picture": "img/other-img/b_logotype_1.png"
+        },
+        {
+            "picture": "img/other-img/b_logotype_2.png"
+        },
+        {
+            "picture": "img/other-img/b_logotype_3.png"
+        }
       ]
+      
     }, // END OF DATA
 
     methods: {

@@ -699,15 +699,20 @@ display:flex;
 .grey-brands {
   margin-bottom: 50px;
   width: 100%;
-  height: 350px;
+  height: 400px;
   background-color: var(--some-other-grey);
 }
 
 .grey-brands div {
   width: 70%;
-  height: 100%;
+  height: 90%;
   margin: 0 auto;
   background-color: green;
+}
+
+.grey-brands h2 {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
 }
 
 .grey-brands figcaption {
