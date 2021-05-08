@@ -203,14 +203,14 @@ function vueInit() {
         {
             "name": "Balck Leather Jacket",
             "stars": 5,
-            "originalPrice": 20,
-            "price":50,
+            "originalPrice": 235,
+            "price": 200,
             "image": "img/other-img/black_elegant_leather_jacket-120x156.jpg"
         },
         {
             "name": "Spring Painted Dress",
             "stars": 5,
-            "price": 60,
+            "price": 47,
             "image": "img/other-img/spring_printed_dress-120x156.jpg"
         }
       ]
@@ -218,8 +218,7 @@ function vueInit() {
     }, // END OF DATA
 
     methods: {
-      getStar: function(stars) {
-
+      getStar: function() {
         return 5;
       }, // END OF getStar FUNCTION
 
