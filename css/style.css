@@ -869,22 +869,31 @@ display:flex;
   font-weight: lighter;
 }
 
+/* THIS IS THE BIGGER CONTAINER (see below) */
 .bigger-footer div div:nth-child(2) article {
   height: calc(100% / 3);
   display: flex;
   border-bottom: 1px solid rgba(104, 104, 104, 0.5);
 }
 
+/* CONTAINER ON THE LEFT (WITH STARS, TEXT AND $)*/
 .bigger-footer div div:nth-child(2) article aside {
   width: 70%;
   line-height: 1.6;
   font-size: 18px;
 }
 
+/* STARS */
+.bigger-footer div div:nth-child(2) article aside .fa-star {
+  color: var(--eleganBlue);
+}
+
+/* Leather Gloves, Balck Leather Jacket, Spring Painted Dress  */
 .bigger-footer div div:nth-child(2) article aside h5:first-of-type {
   margin-top: 20px;
 }
 
+/* CONTAINER ON THE RIGHT (WITH IMAGES) */
 .bigger-footer div div:nth-child(2) article div {
   display: flex;
   height: 100%;
@@ -894,7 +903,8 @@ display:flex;
   align-items: center;
 }
 
-#ft-smallerImages img {
+/* IMAGES IN THE DIV */
+.bigger-footer div div:nth-child(2) article aside + div img {
   width: 80%;
   height: 80%;
   cursor: pointer;
