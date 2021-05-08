@@ -20,6 +20,12 @@ function vueInit() {
       "bigPic1": "img/other-img/winter_collection_bg.jpg",
       "bigPic2": "img/other-img/spring_collection_bg.jpg",
       "bigPic3": "img/other-img/autumn_collection_bg.jpg",
+      // FOOTER
+      "avadaPic": "img/other-img/classic_shop_logo_footer.png",
+      "hover1": false,
+      "hover2": false,
+      "hover3": false,
+      "hover4": false,
 
       navbar: [
 
@@ -184,11 +190,38 @@ function vueInit() {
         {
             "picture": "img/other-img/b_logotype_3.png"
         }
+      ],
+
+      // footer
+      starSectionFooter: [
+        {
+            "name": "Leather Gloves",
+            "stars": 5,
+            "price": 45,
+            "image": "img/other-img/leather_gloves-120x156.jpg"
+        },
+        {
+            "name": "Balck Leather Jacket",
+            "stars": 5,
+            "originalPrice": 20,
+            "price":50,
+            "image": "img/other-img/black_elegant_leather_jacket-120x156.jpg"
+        },
+        {
+            "name": "Spring Painted Dress",
+            "stars": 5,
+            "price": 60,
+            "image": "img/other-img/spring_printed_dress-120x156.jpg"
+        }
       ]
-      
+
     }, // END OF DATA
 
     methods: {
+      getStar: function(stars) {
+
+        return 5;
+      }, // END OF getStar FUNCTION
 
     }, // END OF METHODS
 

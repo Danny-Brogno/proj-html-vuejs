@@ -801,3 +801,116 @@ display:flex;
 }
 
 /* END SUBSCRIBE SECTION */
+
+/* ------------------------------------------------------- */
+/* START OF BIGGER FOOTER */
+
+.bigger-footer {
+  width: 100%;
+  height: 500px;
+  background-color: var(--bg-envelope);
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+.bigger-footer div {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bigger-footer div div {
+  width: calc((100% / 4) - 40px);
+  height: calc(100% - 80px);
+  margin: 40px 0px;
+}
+
+/* START OF FIRST PART (THE ONE WITH THE IMAGE) */
+.bigger-footer div div:first-of-type {
+  display:flex;
+  flex-direction: column;
+  line-height: 200%;
+}
+
+.bigger-footer div:first-of-type img {
+  width: 60%;
+  height: 100px;
+}
+
+.social-footer ul {
+  display: flex;
+  position: relative;
+}
+
+.social-footer ul li {
+  margin-right: 20px;
+}
+
+.social-footer p {
+  padding: 2px 4px;
+  font-size: 10px;
+  background-color: #1d1f22;
+  border-radius: 10px;
+  position: absolute;
+}
+
+/* END OF FIRST PART (THE ONE WITH THE IMAGE) */
+/* START OF SECOND PART (THE ONE WITH THE STARS) */
+
+.bigger-footer div div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+
+.bigger-footer div div:nth-child(2) h4 {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.bigger-footer div div:nth-child(2) article {
+  height: calc(100% / 3);
+  display: flex;
+  border-bottom: 1px solid rgba(104, 104, 104, 0.5);
+}
+
+.bigger-footer div div:nth-child(2) article aside {
+  width: 70%;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+.bigger-footer div div:nth-child(2) article aside h5:first-of-type {
+  margin-top: 20px;
+}
+
+.bigger-footer div div:nth-child(2) article div {
+  display: flex;
+  height: 100%;
+  width: 30%;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+#ft-smallerImages img {
+  width: 80%;
+  height: 80%;
+  cursor: pointer;
+}
+
+/* END OF SECOND PART (THE ONE WITH THE STARS) */
+
+
+
+/* ---------------------------------------- */
+.bigger-footer div div:nth-child(3) {
+  /* debug */
+  background-color: navy;
+}
+
+.bigger-footer div div:nth-child(4) {
+  /* debug */
+  background-color: dodgerblue;
+}

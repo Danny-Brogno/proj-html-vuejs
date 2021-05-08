@@ -485,10 +485,17 @@
 
         <!-- END OF BIGGER SLIDER SECTION -->
 
+
+
+
         <!-- START OF WORK IN PROGRESS -->
         <section class="work-in-progress">
         </section>
         <!-- END OF WORK IN PROGRESS -->
+
+
+
+
 
       </main> <!-- END OF MAIN -->
 
@@ -531,7 +538,96 @@
           </div>
         </section>
         <!-- END OF SUBSCRIBE SECTION -->
-        
+
+        <section class="bigger-footer">
+
+          <div>
+
+            <!-- THIS IS THE FIRST ONE (THE ONE WITH THE IMAGE) -->
+            <div>
+              <img :src="avadaPic" style="margin-bottom: 20px;">
+              <p>12345 North Main Street,</p>
+              <p>New York, NY 555555</p>
+              <p>Phone: 1.800.555.6789</p>
+              <p>Email: info@company.com</p>
+              <p>Web: Theme-fusion.com</p>
+
+              <div class="social-footer">
+
+                <ul>
+
+                  <li @mouseover="hover1 = true" @mouseleave="hover1 = false">
+                    <a href="#">
+                      <i class="fab fa-facebook-f"></i>
+                      <p v-if="hover1">Facebook</p>
+                    </a>
+                  </li>
+
+                  <li @mouseover="hover2 = true" @mouseleave="hover2 = false">
+                    <a href="#">
+                      <i class="fab fa-twitter"></i>
+                      <p v-if="hover2">Twitter</p>
+                    </a>
+                  </li>
+
+                  <li @mouseover="hover3 = true" @mouseleave="hover3 = false">
+                    <a href="#">
+                      <i class="fab fa-instagram"></i>
+                      <p v-if="hover3">Instagram</p>
+                    </a>
+                  </li>
+
+                  <li @mouseover="hover4 = true" @mouseleave="hover4 = false">
+                    <a href="#">
+                      <i class="fab fa-youtube"></i>
+                      <p v-if="hover4">YouTube</p>
+                    </a>
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </div><!-- END OF FIRST ONE -->
+
+            <!-- START OF SECOND PART (THE ONE WITH THE STARS) -->
+            <div>
+              <h4>Top Rated Products</h4>
+
+              <article v-for="obj in starSectionFooter">
+
+                <aside>
+                  <h5>
+                    <a href="#">
+                      {{ obj.name }}
+                    </a>
+                  </h5>
+                  <h5><i v-for="star in getStar(starSectionFooter.stars)" class ="fas fa-star"></i></h5>
+                  <h5 v-if="obj.originalPrice">${{ obj.originalPrice }}</h5>
+                  <h5>${{ obj.price }}</h5>
+                </aside>
+                <div id="ft-smallerImages">
+                  <img :src="obj.image">
+                </div>
+
+              </article>
+
+
+            </div>
+            <!-- END OF SECOND PART (THE ONE WITH THE STARS) -->
+
+            <div>
+              <p>CIAO</p>
+            </div>
+
+            <div>
+              <p>CIAO</p>
+            </div>
+
+          </div>
+
+        </section>
+
       </footer> <!-- END OF FOOTER -->
 
     </section><!-- END OF DANNY VUE -->
