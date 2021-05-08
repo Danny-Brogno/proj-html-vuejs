@@ -911,16 +911,36 @@ display:flex;
 }
 
 /* END OF SECOND PART (THE ONE WITH THE STARS) */
+/* START OF THIRD PART (THE ONE WITH THE TEXT) */
 
 
-
-/* ---------------------------------------- */
 .bigger-footer div div:nth-child(3) {
-  /* debug */
-  background-color: navy;
+  display: flex;
+  flex-direction: column;
+  line-height: 0;
 }
+
+.bigger-footer div div:nth-child(3) div {
+  width: 100%;
+  height: calc(100% / 3);
+  margin: 0px;
+}
+
+.bigger-footer div div:nth-child(3) div a {
+  border-bottom: 1px solid rgba(104, 104, 104, 0.5);
+  line-height: 350%;
+}
+
+.bigger-footer div div:nth-child(3) div a:hover {
+  color: var(--eleganBlue);
+}
+
+/* END OF THIRD PART (THE ONE WITH THE TEXT) */
+/* START OF FOURT PART (THE ONE WITH THE BOXES) */
 
 .bigger-footer div div:nth-child(4) {
   /* debug */
   background-color: dodgerblue;
 }
+
+/* END OF FOURT PART (THE ONE WITH THE BOXES) */
