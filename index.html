@@ -666,20 +666,23 @@
             </div>
             <!-- END OF THIRD PART (THE ONE WITH THE TEXT) -->
 
-            <div>
-              <div>
-                <span>TAGS</span>
-                <ul>
+            <!-- START OF FOURTH PART (THE ONE WITH THE BOXES) -->
 
-                  <li v-for="box in boxesInFooter">
-                    <a href="#">
-                      <p> {{ box.boxName }} </p>
-                    </a>
+            <div> <!-- (ONE) -->
+              <div> <!-- (TWO) -->
+
+                <span>TAGS</span>
+
+                <ul> <!-- (THREE) -->
+
+                  <li v-for="box in boxesInFooter"> <!-- (FOUR) -->
+                    <a href="#">{{ box.boxName }}</a>
                   </li>
 
                 </ul>
               </div>
             </div>
+            <!-- END OF FOURTH PART (THE ONE WITH THE BOXES) -->
 
           </div>
 

@@ -937,34 +937,37 @@ display:flex;
 /* END OF THIRD PART (THE ONE WITH THE TEXT) */
 /* START OF FOURT PART (THE ONE WITH THE BOXES) */
 
+/* (ONE) */
 .bigger-footer div div:nth-child(4) {
-  display: flex;
-  justify-content: flex-start;
   background-color: dodgerblue;
 }
 
+/* (TWO) */
 .bigger-footer div div:nth-child(4) div {
-  margin: 0;
   width: 100%;
   height: 100%;
-  display:flex;
-  justify-content: flex-start;
+  margin: 0;
+  line-height: 1;
 }
 
 .bigger-footer div div:nth-child(4) div span {
   margin-bottom: 20px;
 }
 
+/* (THREE) */
 .bigger-footer div div:nth-child(4) div ul {
-  width: 100%;
+  max-width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: flex-start;
   white-space: nowrap;
-  white-space: initial;
+  word-wrap:break-word;
 }
 
+/* (FOUR) */
 .bigger-footer div div:nth-child(4) div ul li {
+  height: 30px;
   margin-right: 10px;
+  word-wrap:break-word;
 }
 
 /* END OF FOURT PART (THE ONE WITH THE BOXES) */
