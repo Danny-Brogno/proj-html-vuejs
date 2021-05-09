@@ -217,72 +217,72 @@ function vueInit() {
 
       boxesInFooter: [
         {
-            "name": "Black"
+            "boxName": "Black"
         },
         {
-            "name": "boots"
+            "boxName": "boots"
         },
         {
-            "name": "Brown"
+            "boxName": "Brown"
         },
         {
-            "name": "casual"
+            "boxName": "casual"
         },
         {
-            "name": "D&D"
+            "boxName": "D&D"
         },
         {
-            "name": "Fabric"
+            "boxName": "Fabric"
         },
         {
-            "name": "flowers"
+            "boxName": "flowers"
         },
         {
-            "name": "Grey"
+            "boxName": "Grey"
         },
         {
-            "name": "hat"
+            "boxName": "hat"
         },
         {
-            "name": "Hipster"
+            "boxName": "Hipster"
         },
         {
-            "name": "lines"
+            "boxName": "lines"
         },
         {
-            "name": "Multi-Purpose"
+            "boxName": "Multi-Purpose"
         },
         {
-            "name": "New York"
+            "boxName": "New York"
         },
         {
-            "name": "Outdoor"
+            "boxName": "Outdoor"
         },
         {
-            "name": "Red"
+            "boxName": "Red"
         },
         {
-            "name": "responsive"
+            "boxName": "responsive"
         },
         {
-            "name": "summer"
+            "boxName": "summer"
         },
         {
-            "name": "sweater"
+            "boxName": "sweater"
         },
         {
-            "name": "Travel"
+            "boxName": "Travel"
         },
         {
-            "name": "Warm"
+            "boxName": "Warm"
         },
         {
-            "name": "White"
+            "boxName": "White"
         },
         {
-            "name": "winter"
+            "boxName": "winter"
         }
-        
+
       ],
 
     }, // END OF DATA

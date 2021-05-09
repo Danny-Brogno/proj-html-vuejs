@@ -668,12 +668,12 @@
 
             <div>
               <div>
-                ciao
-                <ul v-for="box in boxesInFooter">
+                <span>TAGS</span>
+                <ul>
 
-                  <li>
+                  <li v-for="box in boxesInFooter">
                     <a href="#">
-                      <!-- <p> {{ box.name }} </p> -->
+                      <p> {{ box.boxName }} </p>
                     </a>
                   </li>
 
