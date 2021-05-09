@@ -217,71 +217,72 @@ function vueInit() {
 
       boxesInFooter: [
         {
-            "name": "1"
+            "name": "Black"
         },
         {
-            "name": "2"
+            "name": "boots"
         },
         {
-            "name": "3"
+            "name": "Brown"
         },
         {
-            "name": "4"
+            "name": "casual"
         },
         {
-            "name": "5"
+            "name": "D&D"
         },
         {
-            "name": "6"
+            "name": "Fabric"
         },
         {
-            "name": "7"
+            "name": "flowers"
         },
         {
-            "name": "8"
+            "name": "Grey"
         },
         {
-            "name": "9"
+            "name": "hat"
         },
         {
-            "name": "10"
+            "name": "Hipster"
         },
         {
-            "name": "11"
+            "name": "lines"
         },
         {
-            "name": "12"
+            "name": "Multi-Purpose"
         },
         {
-            "name": "13"
+            "name": "New York"
         },
         {
-            "name": "14"
+            "name": "Outdoor"
         },
         {
-            "name": "15"
+            "name": "Red"
         },
         {
-            "name": "16"
+            "name": "responsive"
         },
         {
-            "name": "17"
+            "name": "summer"
         },
         {
-            "name": "18"
+            "name": "sweater"
         },
         {
-            "name": "19"
+            "name": "Travel"
         },
         {
-            "name": "20"
+            "name": "Warm"
         },
         {
-            "name": "21"
+            "name": "White"
         },
         {
-            "name": "22"
+            "name": "winter"
         }
+        
       ],
 
     }, // END OF DATA

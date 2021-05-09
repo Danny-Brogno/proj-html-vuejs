@@ -938,8 +938,12 @@ display:flex;
 /* START OF FOURT PART (THE ONE WITH THE BOXES) */
 
 .bigger-footer div div:nth-child(4) {
-  /* debug */
+  display: inline-block;
   background-color: dodgerblue;
+}
+
+.bigger-footer div div:nth-child(4) ul li {
+  display: inline;
 }
 
 /* END OF FOURT PART (THE ONE WITH THE BOXES) */
