@@ -864,7 +864,9 @@ display:flex;
   flex-direction: column;
 }
 
-.bigger-footer div div:nth-child(2) h4 {
+/* EVEN THE H4 in the NEXT section shares the same attributes */
+.bigger-footer div div:nth-child(2) h4,
+.bigger-footer div div:nth-child(3) ul h4 {
   font-size: 20px;
   font-weight: lighter;
 }
@@ -914,24 +916,21 @@ display:flex;
 /* START OF THIRD PART (THE ONE WITH THE TEXT) */
 
 
-.bigger-footer div div:nth-child(3) {
-  display: flex;
-  flex-direction: column;
-  line-height: 0;
-}
-
-.bigger-footer div div:nth-child(3) div {
-  width: 100%;
-  height: calc(100% / 3);
-  margin: 0px;
-}
-
-.bigger-footer div div:nth-child(3) div a {
-  border-bottom: 1px solid rgba(104, 104, 104, 0.5);
+.bigger-footer div div:nth-child(3) ul {
   line-height: 350%;
 }
 
-.bigger-footer div div:nth-child(3) div a:hover {
+.bigger-footer div div:nth-child(3) ul li {
+  border-bottom: 1px solid rgba(104, 104, 104, 0.5);
+}
+
+.bigger-footer div div:nth-child(3) ul li:first-of-type {
+  line-height: 1;
+  margin-bottom: 20px;
+  border: none;
+}
+
+.bigger-footer div div:nth-child(3) a:hover {
   color: var(--eleganBlue);
 }
 
