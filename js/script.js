@@ -26,6 +26,8 @@ function vueInit() {
       "hover2": false,
       "hover3": false,
       "hover4": false,
+      // CREDIT CARD SECTION IN FOOTER
+      "creditCard": "img/other-img/payment_cards_footer.png",
 
       navbar: [
 
@@ -286,7 +288,7 @@ function vueInit() {
       ],
 
     }, // END OF DATA
-
+    
     methods: {
 
       getStar: function(stars) {

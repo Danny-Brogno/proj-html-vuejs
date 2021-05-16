@@ -25,6 +25,7 @@
   --footer-gray: #303337;
   --envelope-gray:#74797f;
   --bg-envelope: #2b2e32;
+  --creditCardFooter: #1d1f22;
 }
 
 * {
@@ -931,6 +932,7 @@ display:flex;
 }
 
 .bigger-footer div div:nth-child(3) a:hover {
+  transition: 0.4s;
   color: var(--eleganBlue);
 }
 
@@ -939,19 +941,18 @@ display:flex;
 
 /* (ONE) */
 .bigger-footer div div:nth-child(4) {
-  background-color: dodgerblue;
+
 }
 
 /* (TWO) */
 .bigger-footer div div:nth-child(4) div {
   width: 100%;
-  height: 100%;
   margin: 0;
   line-height: 1;
 }
 
 .bigger-footer div div:nth-child(4) div span {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 /* (THREE) */
@@ -964,8 +965,67 @@ display:flex;
 
 /* (FOUR) */
 .bigger-footer div div:nth-child(4) div ul li {
-  height: 30px;
-  margin-right: 10px;
+  margin: 0px 5px 5px 0px;
+  padding: 10px 10px;
+  border: 1px solid rgba(104, 104, 104, 0.5);
+}
+
+.bigger-footer div div:nth-child(4) div ul li:hover {
+  transition: 0.4s;
+  background-color: var(--eleganBlue);
 }
 
 /* END OF FOURT PART (THE ONE WITH THE BOXES) */
+/* END OF BIG-FOOTER SECTION */
+
+/* -------------------- CREDIT CARD SECTION --------------------------------- */
+
+.credit-card {
+  height: 200px;
+  background-color: var(--creditCardFooter);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.credit-card div {
+  height: calc(100% / 2);
+  width: 100%;
+}
+
+/* START OF UPPER PART */
+.credit-card div:first-of-type {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 14px;
+}
+
+.credit-card ul,
+.credit-card li {
+  display: flex;
+}
+
+.credit-card li {
+  padding: 0px 10px;
+  margin-right: 10px;
+  border-right: 2px solid white;
+}
+
+.credit-card li span:hover {
+  transition: 0.4s;
+  color: var(--eleganBlue);
+}
+
+/* END OF UPPER PART */
+
+/* START OF LOWER PART (CREDIT CARD LOGOS) */
+.credit-card div:nth-child(2) {
+  display:flex;
+  justify-content: center;
+}
+
+.credit-card div:nth-child(2) img {
+  margin-top: 20px;
+  width: 350px;
+  height: 35px;
+}
