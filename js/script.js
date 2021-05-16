@@ -288,13 +288,13 @@ function vueInit() {
       ],
 
     }, // END OF DATA
-    
+
     methods: {
 
       getStar: function(stars) {
         return 5;
       }, // END OF getStar FUNCTION
-
+      
     }, // END OF METHODS
 
     computed: {
