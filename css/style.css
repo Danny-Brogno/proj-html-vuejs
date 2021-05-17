@@ -244,7 +244,7 @@ nav div:last-of-type li:nth-child(7) a:hover {
 
 /* SLIDER ARE USED  */
 /* There are THREE of these: one after the jumbotron, one in the small-slider section and one in the biggest slider image section */
-main section:first-of-type,
+.featured-products,
 .small-slider article,
 .biggest-slider-image article {
   padding-top: 30px;
@@ -678,24 +678,42 @@ display:flex;
 .biggest-sliding-image-section {
   padding-bottom: 100px;
 }
-/* ------------------------- WORK IN PROGRESS ------------------------------- */
+/* ------------------------- FOUR COLUMNS SECTION ------------------------------- */
 
-
-
-
-
-.work-in-progress {
+.four-columns {
   width: 100%;
-  height: 800px;
-  background-image: url(../img/lavori-in-corso.gif);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-bottom: 100px;
+  height: 550px;
+  background-color: grey;
 }
 
+.four-columns article {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+}
 
+.four-columns article div {
+  width: calc(100% / 4);
+  height: calc(100% - 80px);
+  margin: 30px 20px;
+}
 
+.four-columns article div:first-of-type {
+  background-color: red;
+}
+
+.four-columns article div:nth-child(2) {
+  background-color: green;
+}
+
+.four-columns article div:nth-child(3) {
+  background-color: blue;
+}
+
+.four-columns article div:last-of-type {
+  background-color: pink;
+}
 
 
 /* -------------------------------- FOOTER -----------------------------------*/
