@@ -695,8 +695,8 @@ display:flex;
 
 .four-columns article div {
   width: calc(100% / 4);
-  height: calc(100% - 80px);
-  margin: 30px 20px;
+  height: calc(100% - 100px);
+  margin: 40px 20px;
 }
 
 .four-columns article div:first-of-type {
