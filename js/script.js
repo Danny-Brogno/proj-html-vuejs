@@ -175,6 +175,34 @@ function vueInit() {
         }
       ],
 
+      // FOUR columns 
+      fourColumns: [
+        {
+          "title": "FEATURED",
+          "type": "Black Jacket",
+          "price": 125,
+          "picture": "img/other-img/black_leather_jacket-120x156.jpg"
+        },
+        {
+          "title": "FEATURED",
+          "type": "Black Jacket",
+          "price": 125,
+          "picture": "img/other-img/black_leather_jacket-120x156.jpg"
+        },
+        {
+          "title": "FEATURED",
+          "type": "Black Jacket",
+          "price": 125,
+          "picture": "img/other-img/black_leather_jacket-120x156.jpg"
+        },
+        {
+          "title": "FEATURED",
+          "type": "Black Jacket",
+          "price": 125,
+          "picture": "img/other-img/black_leather_jacket-120x156.jpg"
+        }
+      ],
+
       // BRANDS IN FOOTER
       sponsorLogos: [
         {
@@ -287,6 +315,8 @@ function vueInit() {
 
       ],
 
+
+
     }, // END OF DATA
 
     methods: {
@@ -294,7 +324,7 @@ function vueInit() {
       getStar: function(stars) {
         return 5;
       }, // END OF getStar FUNCTION
-      
+
     }, // END OF METHODS
 
     computed: {

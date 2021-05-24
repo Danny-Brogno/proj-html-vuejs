@@ -493,20 +493,15 @@
 
           <article>
 
-            <div>
-
-            </div>
-
-            <div>
-
-            </div>
-
-            <div>
-
-            </div>
-
-            <div>
-
+            <div v-for="point in fourColumns">
+              <section>
+                <h3>{{ point.title }}</h3>
+                <a href="#">
+                  <p>{{ point.type }}</p>
+                  <span>${{ point.price }}</span>
+                  <img :src="point.picture">
+                </a>
+              </section>
             </div>
 
           </article>
