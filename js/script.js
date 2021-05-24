@@ -175,32 +175,70 @@ function vueInit() {
         }
       ],
 
-      // FOUR columns 
-      fourColumns: [
+      // FOUR columns
+      fourColumns1: [
         {
           "title": "FEATURED",
           "type": "Black Jacket",
           "price": 125,
-          "picture": "img/other-img/black_leather_jacket-120x156.jpg"
+          "picture": "img/other-img/black_leather_jacket-120x156.jpg",
+          "tipo": "Black Leather Jacket",
+          "stelle": 5,
+          "sconto": 235,
+          "prezzo": 200,
+          "foto": "img/other-img/black_leather_jacket-120x156.jpg",
+          "tipos": "Hipster Black Top",
+          "precio": 57,
+          "imagen": "img/other-img/black_leather_jacket-120x156.jpg"
         },
         {
-          "title": "FEATURED",
-          "type": "Black Jacket",
-          "price": 125,
-          "picture": "img/other-img/black_leather_jacket-120x156.jpg"
+          "title": "ON SALE",
+          "type": "Black Leather Jacket",
+          "stars": 5,
+          "price": 200,
+          "discount": 235,
+          "picture": "img/other-img/black_leather_jacket-120x156.jpg",
+          "tipo": "Blue Leather Jacket",
+          "sconto": 80,
+          "prezzo": 60,
+          "foto": "img/other-img/black_leather_jacket-120x156.jpg",
+          "tipos": "Casual Colorful T-shirts",
+          "descuento": 36,
+          "precio": 24,
+          "imagen": "img/other-img/black_leather_jacket-120x156.jpg"
         },
         {
-          "title": "FEATURED",
-          "type": "Black Jacket",
-          "price": 125,
-          "picture": "img/other-img/black_leather_jacket-120x156.jpg"
+          "title": "TOP RATED",
+          "type": "Leather Gloves",
+          "stars": 5,
+          "price": 45,
+          "picture": "img/other-img/black_leather_jacket-120x156.jpg",
+          "tipo": "Black Leather Jacket",
+          "stelle": 5,
+          "sconto": 235,
+          "prezzo": 200,
+          "foto": "img/other-img/black_leather_jacket-120x156.jpg",
+          "tipos": "Spring Printed Dress",
+          "estrella": 5,
+          "precio": 47,
+          "imagen": "img/other-img/black_leather_jacket-120x156.jpg"
         },
         {
-          "title": "FEATURED",
-          "type": "Black Jacket",
-          "price": 125,
-          "picture": "img/other-img/black_leather_jacket-120x156.jpg"
-        }
+          "title": "LATEST REVIEWS",
+          "type": "Black Leather Jacket",
+          "stars": 5,
+          "picture": "img/other-img/black_leather_jacket-120x156.jpg",
+          "producer":"by admin",
+          "tipo": "Leather Gloves",
+          "stelle": 5,
+          "foto": "img/other-img/black_leather_jacket-120x156.jpg",
+          "produttore":"by Beardman",
+          "tipos": "Spring Printed Dress",
+          "estrella": 5,
+          "imagen": "img/other-img/black_leather_jacket-120x156.jpg",
+          "productor":"by admin"
+        },
+
       ],
 
       // BRANDS IN FOOTER

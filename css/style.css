@@ -699,6 +699,21 @@ display:flex;
   margin: 40px 20px;
 }
 
+.four-columns article div img{
+  width: 80px;
+  height: 80px;
+}
+
+.four-columns figcaption {
+  border-bottom: 1px solid black;
+}
+
+.four-columns figcaption span {
+  color: lime;
+  text-decoration: line-through;
+}
+
+
 .four-columns article div:first-of-type {
   background-color: red;
 }

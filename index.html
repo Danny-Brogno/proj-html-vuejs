@@ -493,23 +493,47 @@
 
           <article>
 
-            <div v-for="point in fourColumns">
-              <section>
-                <h3>{{ point.title }}</h3>
-                <a href="#">
-                  <p>{{ point.type }}</p>
-                  <span>${{ point.price }}</span>
-                  <img :src="point.picture">
-                </a>
-              </section>
+            <div v-for="point in fourColumns1">
+
+              <!-- EVERY FIGCAPTION IS A LINE NOT A COLUMN -->
+
+              <!-- FIRST LINE -->
+              <figcaption>
+                <h3>{{  point.title  }}</h3>
+                <p>{{ point.type }}</p>
+                <i v-if="point.stars">{{ point.stars }} STARS</i>
+                <span v-if="point.discount">${{ point.discount }}</span>
+                <p v-if="point.price">${{ point.price }}</p>
+                <img :src="point.picture">
+                <p v-if="point.producer">{{ point.producer }}</p>
+              </figcaption>
+
+              <!-- SECOND LINE -->
+              <figcaption>
+                <p>{{ point.tipo }}</p>
+                <i v-if="point.stelle">{{ point.stelle }} STARS</i>
+                <span v-if="point.sconto">${{ point.sconto }}</span>
+                <p v-if="point.prezzo">${{ point.prezzo }}</p>
+                <img :src="point.foto">
+                <p v-if="point.produttore">{{ point.produttore }}</p>
+              </figcaption>
+
+              <!-- THIRD LINE -->
+              <figcaption>
+                <p>{{ point.tipos  }}</p>
+                <i v-if="point.estrella">{{ point.estrella }} STARS</i>
+                <span v-if="point.descuento">${{ point.descuento  }}</span>
+                <p v-if="point.precio">${{ point.precio  }}</p>
+                <img :src="point.imagen ">
+                <p v-if="point.productor">{{ point.productor }}</p>
+              </figcaption>
+
             </div>
 
           </article>
 
-
         </section>
         <!-- END OF four column SECTION -->
-
 
 
 
